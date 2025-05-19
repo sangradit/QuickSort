@@ -1,3 +1,5 @@
+/*https://github.com/egecinar3/QuickSort-Implementation/blob/main/QuickSort%20Implementation.cpp*/
+
 #include <iostream>
 using namespace std;
 void swap(int *a, int *b)
