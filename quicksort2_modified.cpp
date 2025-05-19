@@ -11,8 +11,8 @@ void swap(int *a, int *b)
 	*b = t;
 }
 
-int partition(int arr[], int l, int r)
-{
+int partition(int arr[], int l, int r) //time complexity partition: O(n) karena kita ngeliat setiap elemen dalam array yg jumlahnya itu n
+{				       //nah walaupun udah dipartisi jadi dua kita tetap ngeliat setiap elemennya lagi yg jumlahnya n kali
 	int pivot = arr[l];
 	int i = l + 1;
 	for (int j = l + 1; j <= r; j++)
@@ -27,15 +27,15 @@ int partition(int arr[], int l, int r)
 	return (i - 1);
 }
 
-void quickSort(int arr[], int l, int r)
+void quickSort(int arr[], int l, int r) 
 {
 	if (l < r)
 	{
-		int x = partition(arr, l, r);
-		quickSort(arr, l, x - 1);
-		quickSort(arr, x + 1, r);
-	}
-}
+		int x = partition(arr, l, r); 
+		quickSort(arr, l, x - 1); //dalam kasus ideal dimana nilai pivotnya merupakan nilai tengah data, berarti kan data itu dibagi dua sama rata
+		quickSort(arr, x + 1, r); //jadi banyaknya kita bagi array itu jadi dua (level partition) adalah log2(n) kali,
+	}				  //fungsi partition dengan time complexity O(n) dieksekusi sebanyak log2(n) kali
+}					  //sehingga time complexity Quick Sort dalam kasus ideal adalah O(nlogn)
 
 void printArr(int arr[], int length)
 {
