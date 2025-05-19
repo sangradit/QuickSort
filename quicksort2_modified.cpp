@@ -32,8 +32,7 @@ void quickSort(int arr[], int l, int r)
 	if (l < r)
 	{
 		int x = partition(arr, l, r); 
-		quickSort(arr, l, x - 1); //dalam kasus ideal dimana nilai pivotnya merupakan nilai tengah data, berarti kan data itu dibagi dua sama rata
-		quickSort(arr, x + 1, r); //jadi banyaknya kita bagi array itu jadi dua (level partition) adalah log2(n) kali,
+		quickSort(arr, l, x - 1); //dalam kasus ideal dimana nilai pivotnya merupakan nilai tengah data, berarti kan data itu dibagi dua
 	}				  //fungsi partition dengan time complexity O(n) dieksekusi sebanyak log2(n) kali
 }					  //sehingga time complexity Quick Sort dalam kasus ideal adalah O(nlogn)
 
