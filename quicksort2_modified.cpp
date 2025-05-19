@@ -1,3 +1,4 @@
+//bikin dulu input.txt isi angka pake https://texttools.org/random-number-generator
 #include <iostream>
 #include <fstream>
 #include <vector>
